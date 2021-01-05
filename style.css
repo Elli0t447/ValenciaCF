@@ -1,0 +1,576 @@
+/* *
+{
+    outline: 2px solid red;
+} */
+
+:root
+{
+    --base: #2a2f36;
+    --base2: #ffffff;
+    --base3: #e4d6d6b9;
+    --gris: #202122;
+    --valen: #d65a31; 
+    --fondo: #09090acb;
+    --n: #0a0a0a;
+}
+
+body
+{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+nav
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+nav a:hover > h2
+{
+   color: var(--valen);
+
+}
+
+nav a img {
+    width: 35px;
+    height: 40px;
+}
+
+header img {
+    width: 40px;
+    height: 50px;
+}
+
+header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.valencia-log
+{
+    width: 30px;
+    height: 40px;
+}
+
+
+.nav-img
+{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1
+{
+    color: var(--valen);
+    font-size: 2em;
+}
+
+h2
+{
+    color: var(--base2);
+    font-size: 1.25em;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-areas: 
+        "hero hero hero hero"
+        "main main main main"
+        "footer footer footer footer";
+    height: 70em;
+}
+
+.title
+{
+    position: absolute;
+    z-index: 6;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--valen);
+    font-size: 5rem;
+}
+
+.bg-black
+{
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    position: relative;
+    background-color: var(--fondo);
+}
+  
+
+.bg-txt
+{
+    position: relative;
+    font-size: 2.65em;
+    top: 2.4vh;
+    left: 7vh;
+    text-decoration: none !important;
+}
+
+.bg-txt > h1
+{
+    color: var(--base2);
+}
+
+.bg-txt > p
+{
+    position: relative;
+    color: var(--base3);
+    font-size: 1.25em;
+    top: -1.2em;
+}
+
+.boton
+{
+    width: 45vh;
+    height: 7vh;
+    position: relative;
+    top: -4vh;
+    background-color: var(--valen);
+    border-radius: 40px;
+    color: var(--base2);
+    text-decoration: none;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    z-index: 9;
+    justify-content: center;
+    transition-duration: 425ms;
+}
+
+.boton:hover
+{
+    background-color: #d83c08;
+    transform: translate(15px);
+    transition-duration: 425ms;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    color: var(--n);
+    gap: 40px;
+    padding-left: 40px;
+    background-color: var(--n);
+    position: fixed;
+    top: 0;
+    height: 9vh;
+    width: 100%;
+    z-index: 10;
+}
+
+main
+{
+    background-color: var(--base2);
+    grid-area: main;
+    height: 165em;
+}
+
+.hero
+{
+    background-image: url("/img/hero.jpeg");
+    background-size: cover;
+    background-color: var(--fondo);
+    grid-area: hero;
+    height: 48em;
+}
+
+.hero > h1
+{
+    color: var(--valen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    font-size: 10em;
+}
+
+
+
+section > h1
+{
+    font-size: 3.25em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ultimopart
+{
+    margin-bottom: 3em;
+}
+
+.resultado
+{
+    position: relative;
+    top: -3em;
+    font-weight: bold;
+    font-size: 5em;
+    z-index: 9;
+    color: var(--n);
+}
+.teams
+{
+    position: relative;
+    width: 100%;
+    height: 30em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team1
+{
+    width: 50%;
+    text-align: left;
+}
+
+.team2
+{
+    width: 50%;
+    text-align: right;
+}
+
+.titulo-partido
+{
+    position: relative;
+}
+
+.titulo-partido::after
+{
+    content: "";
+    position: absolute;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    width: 9em;
+    height: 7px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.teamL
+{
+    font-size: 2.3em;
+    left: 8em;
+    position: relative;
+    top: -3em;
+}
+
+.teamL2
+{
+    font-size: 2.3em;
+    right: 8em;
+    position: relative;
+    top: -3em;
+}
+
+.team-img
+{
+    width: 30vh;
+    height: 40vh;
+}
+
+.team-img2
+{
+    width: 40vh;
+    height: 40vh;
+}
+
+.teamL2 > h1
+{
+    color: rgb(76, 38, 182);
+}
+
+.partido
+{
+    font-size: 2em;
+    color: var(--n);
+    position: relative;
+    bottom: 24em;
+}
+
+.partido-dia
+{
+    position: relative;
+    color: var(--n);
+    bottom: 31em;
+    font-size: 1.6em;
+    margin: 0 auto;
+}
+
+.detalles
+{
+    position: relative;
+    margin: 0 auto;
+    bottom: 15em;
+}
+
+
+.image2
+{
+    height: 50em;
+    background-image: url("/img/mestalla.jpg");
+    background-size: cover;
+}
+
+
+.camiseta-text
+{
+    position: relative;
+    top: -3em;
+    left: 0.5em;
+    font-size: 4em;
+    z-index: 7;
+}
+
+.camiseta
+{
+    position: absolute;
+    right: 2em;
+    width: 60vh;
+    height: 50vh;
+    z-index: 6;
+    background-color: base2;
+    text-align: right;
+    transition-duration: 425ms;
+}
+
+.camiseta:hover
+{
+    width: 70vh;
+    height: 65vh;
+    transition-duration: 425ms;
+    z-index: 9;
+}
+
+.camiseta2
+{
+    position: absolute;
+    width: 520px;
+    height: 600px;
+    z-index: 6;
+    right: 25em;
+    transition-duration: 425ms;
+}
+
+.camiseta2:hover
+{
+    width: 40em;
+    height: 50em;
+    transition-duration: 425ms;
+    z-index: 9;
+}
+
+.image2-text
+{
+    color: var(--base2);
+    position: relative;
+    font-size: 2.7em;
+    width: 20em;
+    left: 0.9em;
+    bottom: 5em;
+}
+
+.boton2
+{
+    top: -25vh;
+    left: 1em;
+}
+
+.newsletter
+{
+    height: 40em;
+}
+
+.jugador1 {
+    position: absolute;
+    top: 169em;
+    left: 120em;
+    z-index: 9;
+}
+
+.jugador2
+{
+    position: absolute;
+    top: 172.2em;
+    left: 2em;
+    z-index: 9;
+    width: 40vh;
+    height: 55vh;
+}
+
+.newsletter > h1::after
+{
+    content: "";
+    position: absolute;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    width: 7em;
+    height: 7px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.news
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news > p 
+{
+    position: relative;
+    font-size: 2em;
+    bottom: 2em;
+    color: var(--n);
+}
+
+.news-block
+{
+    position: relative;
+    bottom: 2.5em;
+    display: flex;
+    justify-content: left;
+    width: 60em;
+    height: 28em;
+    margin: 0 auto;
+    background: rgb(180,115,58);
+    background: linear-gradient(90deg, rgba(180,115,58,1) 0%, rgba(246,50,37,1) 98%);
+
+}
+
+.main-form
+{
+    padding-left: 20px;
+}
+
+.main-form > p
+{
+    font-size: 2.5em;
+    color: var(--base2);
+    
+}
+
+.main-form > input[type=email], input[type=text]
+{
+    width: 25em;
+    font-size: 2em;
+    border: 5px solid var(--base2);
+    background-color: var(--valen);
+    color: var(--base2);
+}
+
+.main-form > input[type=button]
+{
+    position: relative;
+    font-size: 2.5em;
+    top: 0.8em;
+    background-color: #161616;
+    color: var(--base2);
+    left: 5.5em;
+    width: 500px;
+}
+
+.main-form > input[type=button]:hover
+{
+    background-color: #d83c08;
+    transition-duration: 625ms;
+}
+
+.naranja
+{
+    color: var(--valen);
+}
+
+footer
+{
+    background-color: var(--n);
+    grid-area: footer;
+    margin-top: 2em;
+    height: 13em;
+    color: var(--base2);
+    z-index: 9;
+}
+
+.autor
+{
+    display: flex;
+    position: relative;
+    bottom: 7em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    color: var(--base);
+}
+
+.info
+{
+    position: relative;
+    left: 2em;
+    width: 25em;
+}
+
+.redes-sociales
+{
+    position: relative;;
+    bottom: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales > p 
+{
+    font-size: 1.35em;
+}   
+
+.footicon
+{
+    width: 50px;
+    height: 50px;
+}
+
+.twitter
+{
+    width: 80px;
+    height: 50px;
+}
