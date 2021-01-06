@@ -14,6 +14,13 @@
     --n: #0a0a0a;
 }
 
+main
+{
+    background-color: var(--base2);
+    grid-area: main;
+    height: 165em;
+}
+
 body
 {
     font-family: sans-serif;
@@ -195,11 +202,16 @@ header
     z-index: 10;
 }
 
-main
+#home
 {
-    background-color: var(--base2);
-    grid-area: main;
-    height: 165em;
+    font-size: 1em;
+    transition-duration: 425ms;
+}
+
+#home:hover
+{
+    font-size: 1.15em;
+    transition-duration: 425ms;
 }
 
 .hero
@@ -235,6 +247,7 @@ section > h1
 .ultimopart
 {
     margin-bottom: 3em;
+
 }
 
 .resultado
@@ -555,6 +568,7 @@ footer
     bottom: 9em;
     display: flex;
     justify-content: center;
+    gap: 30px;
     align-items: center;
 }
 
@@ -573,4 +587,330 @@ footer
 {
     width: 80px;
     height: 50px;
+}
+
+
+
+/* PLANTILLA */
+
+.plantilla
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--base2);
+    color: var(--n);
+    height: 170em;
+    width: 68%;
+    z-index: 8;
+    margin: 0 auto;
+}
+
+.plantilla-bg
+{
+    background-image: url("/img/mestalla-plant.jpg");
+    background-size: cover;
+}
+
+.plantilla > h1
+{
+    font-size: 3.6em;
+    position: absolute;
+    top: 2em;
+    z-index: 6;
+}
+
+.plantilla > p
+{
+    position: absolute;
+    top: 7em;
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 6;
+}
+
+.plantilla-cont
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    top: 17em;
+    flex-wrap: wrap;
+}
+
+.plantilla-cont > h1
+{
+    font-size: 2em;
+    color: var(--n);
+    position: relative;
+    margin: 0 auto;
+    top: 1em;
+}
+
+.plantilla-cont > h1::after
+{
+    content: "";
+    position: absolute;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    width: 7.5em;
+    height: 7px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plantilla-cont > div
+{
+    display: flex;
+    justify-content: center;
+}
+
+.plantilla-img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.bloque
+{
+    width: 26vh;
+    height: 30vh;
+    margin-top: 30px;
+    
+
+    background: linear-gradient(to right, white 50%, rgb(29, 28, 28) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: 425ms ease-out;
+}
+
+.bloque:hover
+{
+    background-position: right bottom;
+}
+
+/* TAQUILLA */
+
+.taquilla-bg
+{
+    background-image: url("/img/valenciabg.png");
+    background-size: cover;
+    height: 120em;
+}
+
+.taquilla
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 15em;
+    left: 0;
+    right: 0;
+    background-color: var(--base2);
+    color: var(--n);
+    width: 75%;
+    z-index: 8;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.taquilla-block
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70em;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.taquilla-block > h1 {
+    position: relative;
+    top: 4.3em;
+    font-size: 3em;
+    z-index: 8;
+    color: var(--valen);
+}
+
+.equipo-taquilla
+{
+    width: 40px;
+    height: 50px;
+}
+
+.entrada-boton
+{
+    border-radius: 30px;
+    background-color: orange;
+    padding: 10px;
+    height: 3em;
+    transition-duration: 425ms;
+}
+
+.entrada-boton > h1
+{
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 5px;
+
+}
+
+.entrada-boton:hover
+{
+    transform: translateX(-20px);
+    transition-duration: 425ms;
+}
+
+/* CLUB */
+
+.club-main
+{
+    height: 100em;
+}
+
+.club-bg
+{
+    background-image: url("/img/club-bg.jpg");
+    background-size: cover;
+    height: 100em;
+}
+
+.club-fondo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffffa2;
+    color: var(--n);
+    height: 100em;
+    width: 60%;
+    z-index: 8;
+    margin: 0 auto;
+}
+
+.club-fondo > div
+{
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.club-tit
+{
+    position: absolute;
+    top: 1em;
+    font-size: 6em;
+}
+
+.club-fondo > p
+{
+    position: absolute;
+    top: 10em;
+    text-align: center;
+    font-size: 2.35em;
+    z-index: 7;
+}
+
+.club-fondo > img
+{
+    width: 100%;
+    position: relative;
+    top: 20em;
+}
+
+
+/* TIENDA */
+
+.tienda
+{
+    background-image: url("/img/mestalla.jpg");
+    background-size: cover;
+    height: 90em;
+}
+
+.tienda-items-container
+{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    padding: 50px;
+    gap: 20vh;
+    top: 9em;
+    flex-wrap: wrap;
+    z-index: 8;
+}
+
+.tienda-item
+{
+    background-color: rgba(206, 206, 211, 0.89);
+    width: 27vh;
+    height: 27vh;
+    
+}
+
+.camiseta-item
+{
+    width: 100%;
+    height: 100%;
+}
+.tienda-boton
+{
+    width: 11em;
+    height: 3em;
+    border-radius: 30px;
+    color: var(--base2);
+    background-color: var(--valen);
+    display: flex;
+    align-items:center;
+    position: relative;
+    top: -1.5em;
+    left: -1.5em;
+    justify-content: center;
+    transition-duration: 425ms;
+}
+
+.tienda-boton:hover
+{
+    width: 13em;
+    height: 4em;
+    transition-duration: 425ms;
+}
+
+.talla
+{
+    
+    width: 3em;
+    left: 19em;
+    top: -5em;
+    transition-duration: 425ms;
+}
+
+.talla:hover
+{
+    width: 4em;
+    height: 3.5em;
+    transition-duration: 425ms;
 }
